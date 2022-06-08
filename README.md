@@ -1,7 +1,8 @@
 # Cloudera Edge Management Grafana Dashboards
 
-This repository contains the Grafana dashboard sources referenced in the official Cloudera Edge Management documentation https://docs.cloudera.com/cem/latest/using-cem/topics/cem-monitoring-grafana-dashboard.html
-No other resources will be stored in the repository.
+This repository contains the [Grafana](https://grafana.com/) dashboard sources referenced in the official Cloudera Edge Management documentation https://docs.cloudera.com/cem/latest/using-cem/topics/cem-monitoring-grafana-dashboard.html
+<br>No other resources will be stored in the repository.
+<br>The dashboard sources are optional and not required to use with CEM.
 
-
+Please note that Grafana is under the AGPL.
 
