@@ -587,7 +587,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "sum(rate(efm_http_server_requests_seconds_count{uri=~\"/efm/api/c2-protocol/heartbeat\"}[1m]))",
+          "expr": "sum(rate(efm_http_server_requests_seconds_count{uri=~\"(/efm)?/api/c2-protocol/heartbeat\"}[1m]))",
           "instant": false,
           "interval": "",
           "intervalFactor": 2,
@@ -674,7 +674,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "sum(rate(efm_http_server_requests_seconds_count{uri=~\"/efm/api/c2-protocol/acknowledge\"}[1m]))",
+          "expr": "sum(rate(efm_http_server_requests_seconds_count{uri=~\"(/efm)?/api/c2-protocol/acknowledge\"}[1m]))",
           "instant": false,
           "interval": "",
           "intervalFactor": 2,
@@ -758,7 +758,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "max(efm_http_server_requests_seconds{uri=~\"/efm/api/c2-protocol/heartbeat\", status!~\"[4|5]..\"}) by (quantile)",
+          "expr": "max(efm_http_server_requests_seconds{uri=~\"(/efm)?/api/c2-protocol/heartbeat\", status!~\"[4|5]..\"}) by (quantile)",
           "hide": false,
           "interval": "",
           "legendFormat": "{{quantile}}",
@@ -841,7 +841,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "max(efm_http_server_requests_seconds{uri=~\"/efm/api/c2-protocol/acknowledge\", status!~\"[4|5]..\"}) by (quantile)",
+          "expr": "max(efm_http_server_requests_seconds{uri=~\"(/efm)?/api/c2-protocol/acknowledge\", status!~\"[4|5]..\"}) by (quantile)",
           "hide": false,
           "interval": "",
           "legendFormat": "{{quantile}}",
@@ -903,7 +903,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "sum(floor(increase(efm_http_server_requests_seconds_count{uri=~\"/efm/api/c2-protocol/heartbeat\", status!~\"[2|3]..\"}[$__range])))",
+          "expr": "sum(floor(increase(efm_http_server_requests_seconds_count{uri=~\"(/efm)?/api/c2-protocol/heartbeat\", status!~\"[2|3]..\"}[$__range])))",
           "hide": false,
           "interval": "",
           "legendFormat": "Status: {{status}}",
@@ -965,7 +965,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "sum(floor(increase(efm_http_server_requests_seconds_count{uri=~\"/efm/api/c2-protocol/acknowledge\", status!~\"[2|3]..\"}[$__range])))",
+          "expr": "sum(floor(increase(efm_http_server_requests_seconds_count{uri=~\"(/efm)?/api/c2-protocol/acknowledge\", status!~\"[2|3]..\"}[$__range])))",
           "hide": false,
           "interval": "",
           "legendFormat": "Status: {{status}}",
